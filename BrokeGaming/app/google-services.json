@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "441338097429",
+    "project_id": "brokegaming-1d4bb",
+    "storage_bucket": "brokegaming-1d4bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441338097429:android:a324c28ec84d322843431c",
+        "android_client_info": {
+          "package_name": "com.example.brokegaming"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441338097429-8oia9lmio5vaib7eurk8452eqcmim278.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5axCcXJEG4YDly0f19X4-rcTktdxSUI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441338097429-8oia9lmio5vaib7eurk8452eqcmim278.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
