@@ -26,7 +26,7 @@ class GamesActivity : AppCompatActivity() {
 
         val gamesManager = GamesManager()
         doAsync {
-            val results: List<Game> = try{
+            val games: List<Game> = try{
                 gamesManager.getGames()
             }catch(exception: Exception){
                 Log.e("GamesActivity", "Retrieving games failed!", exception)
@@ -34,8 +34,8 @@ class GamesActivity : AppCompatActivity() {
             }
 
             runOnUiThread {
-                if(results.isNotEmpty()){
-                    val adapter: GamesAdapter = GamesAdapter(results)
+                if(games.isNotEmpty()){
+                    val adapter: GamesAdapter = GamesAdapter(games)
                     recyclerView.adapter = adapter
                 }
                 else{
