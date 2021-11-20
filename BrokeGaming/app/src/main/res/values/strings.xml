@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BrokeGaming</string>
+    <string-array name="sorting">
+        <item>release-date</item>
+        <item>alphabetical</item>
+        <item>relevance</item>
+    </string-array>
 </resources>

@@ -24,11 +24,11 @@ class GamesManager {
         okHttpClient = okHttpClientBuilder.build()
     }
 
-    fun getGames(): List<Game>{
+    fun retrieveGames(sortBy: String): List<Game>{
         val games: MutableList<Game> = mutableListOf()
 
         val request: Request = Request.Builder()
-            .url("https://www.freetogame.com/api/games")
+            .url("https://www.freetogame.com/api/games?sort-by=$sortBy")
             .get()
             .build()
 
