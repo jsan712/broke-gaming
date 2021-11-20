@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         firebaseAnalytics.logEvent("login_screen_shown", null)
 
         login.isEnabled = false
-        signUp.isEnabled = false
 
         val savedUsername = preferences.getString("USERNAME", "")
         username.setText(savedUsername)
@@ -66,9 +65,9 @@ class MainActivity : AppCompatActivity() {
 
                     progressBar.visibility = View.VISIBLE
 
-//                    val intent: Intent = Intent(this, GamesActivity::class.java)
+                    val intent: Intent = Intent(this, GamesActivity::class.java)
 //                    intent.putExtra("LOCATION", "Washington")
-//                    startActivity(intent)
+                    startActivity(intent)
                 }
                 else{
                     firebaseAnalytics.logEvent("login_failed", null)
@@ -81,30 +80,33 @@ class MainActivity : AppCompatActivity() {
         }
 
         signUp.setOnClickListener {
-            val inputtedUsername: String = username.text.toString()
-            val inputtedPassword: String = password.text.toString()
-            firebaseAuth.createUserWithEmailAndPassword(inputtedUsername, inputtedPassword)
-                .addOnCompleteListener { task ->
-                    if(task.isSuccessful){
-                        val currentUser: FirebaseUser = firebaseAuth.currentUser!!
-                        Toast.makeText(this, "Registered successfully: ${currentUser.email}", Toast.LENGTH_LONG).show()
-                    }
-                    else{
-                        val exception = task.exception
-                        if(exception is FirebaseAuthInvalidCredentialsException){
-                            Toast.makeText(this, "Registration failed: you did not supply a valid email address", Toast.LENGTH_LONG).show()
-                        }
-                        else if(exception is FirebaseAuthUserCollisionException){
-                            Toast.makeText(this, "Registration failed: this account already exists!", Toast.LENGTH_LONG).show()
-                        }
-                        else if(exception is FirebaseAuthWeakPasswordException){
-                            Toast.makeText(this, "Registration failed: your password does not meet minimum requirements!", Toast.LENGTH_LONG).show()
-                        }
-                        else{
-                            Toast.makeText(this, "Registration failed: $exception", Toast.LENGTH_LONG).show()
-                        }
-                    }
-                }
+            val intent: Intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+
+//            val inputtedUsername: String = username.text.toString()
+//            val inputtedPassword: String = password.text.toString()
+//            firebaseAuth.createUserWithEmailAndPassword(inputtedUsername, inputtedPassword)
+//                .addOnCompleteListener { task ->
+//                    if(task.isSuccessful){
+//                        val currentUser: FirebaseUser = firebaseAuth.currentUser!!
+//                        Toast.makeText(this, "Registered successfully: ${currentUser.email}", Toast.LENGTH_LONG).show()
+//                    }
+//                    else{
+//                        val exception = task.exception
+//                        if(exception is FirebaseAuthInvalidCredentialsException){
+//                            Toast.makeText(this, "Registration failed: you did not supply a valid email address or password", Toast.LENGTH_LONG).show()
+//                        }
+//                        else if(exception is FirebaseAuthUserCollisionException){
+//                            Toast.makeText(this, "Registration failed: this account already exists!", Toast.LENGTH_LONG).show()
+//                        }
+//                        else if(exception is FirebaseAuthWeakPasswordException){
+//                            Toast.makeText(this, "Registration failed: your password does not meet minimum requirements!", Toast.LENGTH_LONG).show()
+//                        }
+//                        else{
+//                            Toast.makeText(this, "Registration failed: $exception", Toast.LENGTH_LONG).show()
+//                        }
+//                    }
+//                }
         }
 
         username.addTextChangedListener(textWatcher)
@@ -121,7 +123,6 @@ class MainActivity : AppCompatActivity() {
             val inputtedPassword: String = password.text.toString()
             val enableButton: Boolean = inputtedUsername.isNotBlank() && inputtedPassword.isNotBlank()
             login.isEnabled = enableButton
-            signUp.isEnabled = enableButton
         }
 
         override fun afterTextChanged(p0: Editable?){}
