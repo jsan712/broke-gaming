@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/CSCI4237/Project2/project-2-byoi-josh/BrokeGaming/app/src/main/res/layout/activity_games.xml" value="0.24479166666666666" />
+        <entry key="..\:/CSCI4237/Project2/project-2-byoi-josh/BrokeGaming/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/CSCI4237/Project2/project-2-byoi-josh/BrokeGaming/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/CSCI4237/Project2/project-2-byoi-josh/BrokeGaming/app/src/main/res/layout/game_list.xml" value="0.2234375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
