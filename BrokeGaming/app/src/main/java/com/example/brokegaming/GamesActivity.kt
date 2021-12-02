@@ -8,17 +8,18 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.chip.ChipGroup
 import org.jetbrains.anko.doAsync
 
 class GamesActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var spinner: Spinner
-    private lateinit var filter: EditText
+    private lateinit var horizontalScrollView: HorizontalScrollView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_games)
-        filter = findViewById(R.id.filters)
+        horizontalScrollView = findViewById(R.id.horizontalScrollView)
 
         Log.d("GamesActivity", "onCreate called!")
         val intent: Intent = getIntent()

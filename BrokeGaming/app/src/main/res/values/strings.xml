@@ -1,5 +1,52 @@
 <resources>
     <string name="app_name">BrokeGaming</string>
+
+    <string name="mmorpg">mmorpg</string>
+    <string name="shooter">shooter</string>
+    <string name="strategy">strategy</string>
+    <string name="moba">moba</string>
+    <string name="racing">racing</string>
+    <string name="sports">sports</string>
+    <string name="social">social</string>
+    <string name="sandbox">sandbox</string>
+    <string name="open_world">open-world</string>
+    <string name="survival">survival</string>
+    <string name="pvp">pvp</string>
+    <string name="pve">pve</string>
+    <string name="pixel">pixel</string>
+    <string name="voxel">voxel</string>
+    <string name="zombie">zombie</string>
+    <string name="turn_based">turn-based</string>
+    <string name="first_person">first-person</string>
+    <string name="third_person">third-person</string>
+    <string name="top_down">top-down</string>
+    <string name="tank">tank</string>
+    <string name="space">space</string>
+    <string name="sailing">sailing</string>
+    <string name="side_scroller">side-scroller</string>
+    <string name="superhero">superhero</string>
+    <string name="permadeath">permadeath</string>
+    <string name="card">card</string>
+    <string name="battle_royale">battle-royale</string>
+    <string name="mmo">mmo</string>
+    <string name="mmofps">mmofps</string>
+    <string name="mmotps">mmotps</string>
+    <string name="_3d">3d</string>
+    <string name="_2d">2d</string>
+    <string name="anime">anime</string>
+    <string name="fantasy">fantasy</string>
+    <string name="sci_fi">sci-fi</string>
+    <string name="fighting">fighting</string>
+    <string name="action_rpg">action-rpg</string>
+    <string name="action">action</string>
+    <string name="military">military</string>
+    <string name="martial_arts">martial-arts</string>
+    <string name="fight">fight</string>
+    <string name="low_spec">low-spec</string>
+    <string name="tower_defense">tower-defense</string>
+    <string name="horror">horror</string>
+    <string name="mmorts">mmorts</string>
+
     <string-array name="sorting">
         <item>release-date</item>
         <item>alphabetical</item>
