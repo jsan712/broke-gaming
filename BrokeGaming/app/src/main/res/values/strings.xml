@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">BrokeGaming</string>
 
-    <string name="mmorpg">mmorpg</string>
+    <string name="mmorpg" translatable="false">mmorpg</string>
     <string name="shooter">shooter</string>
     <string name="strategy">strategy</string>
-    <string name="moba">moba</string>
+    <string name="moba" translatable="false">moba</string>
     <string name="racing">racing</string>
     <string name="sports">sports</string>
     <string name="social">social</string>
     <string name="sandbox">sandbox</string>
     <string name="open_world">open-world</string>
     <string name="survival">survival</string>
-    <string name="pvp">pvp</string>
-    <string name="pve">pve</string>
-    <string name="pixel">pixel</string>
-    <string name="voxel">voxel</string>
+    <string name="pvp" translatable="false">pvp</string>
+    <string name="pve" translatable="false">pve</string>
+    <string name="pixel" translatable="false">pixel</string>
+    <string name="voxel" translatable="false">voxel</string>
     <string name="zombie">zombie</string>
     <string name="turn_based">turn-based</string>
     <string name="first_person">first-person</string>
@@ -28,12 +28,12 @@
     <string name="permadeath">permadeath</string>
     <string name="card">card</string>
     <string name="battle_royale">battle-royale</string>
-    <string name="mmo">mmo</string>
-    <string name="mmofps">mmofps</string>
-    <string name="mmotps">mmotps</string>
-    <string name="_3d">3d</string>
-    <string name="_2d">2d</string>
-    <string name="anime">anime</string>
+    <string name="mmo" translatable="false">mmo</string>
+    <string name="mmofps" translatable="false">mmofps</string>
+    <string name="mmotps" translatable="false">mmotps</string>
+    <string name="_3d" translatable="false">3d</string>
+    <string name="_2d" translatable="false">2d</string>
+    <string name="anime" translatable="false">anime</string>
     <string name="fantasy">fantasy</string>
     <string name="sci_fi">sci-fi</string>
     <string name="fighting">fighting</string>
@@ -41,11 +41,18 @@
     <string name="action">action</string>
     <string name="military">military</string>
     <string name="martial_arts">martial-arts</string>
-    <string name="fight">fight</string>
+    <string name="flight">flight</string>
     <string name="low_spec">low-spec</string>
     <string name="tower_defense">tower-defense</string>
     <string name="horror">horror</string>
-    <string name="mmorts">mmorts</string>
+    <string name="mmorts" translatable="false">mmorts</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="don_t_have_an_account_sign_up_below">Don\'t have an account? Sign up below!</string>
+    <string name="espa_ol">Español</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="remember_me">Remember me</string>
 
     <string-array name="sorting">
         <item>release-date</item>

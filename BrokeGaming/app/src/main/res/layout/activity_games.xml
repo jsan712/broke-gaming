@@ -296,7 +296,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Entry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fight" />
+                android:text="@string/flight" />
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.MaterialComponents.Chip.Entry"
