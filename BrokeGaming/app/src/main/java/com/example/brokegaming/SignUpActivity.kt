@@ -39,11 +39,13 @@ class SignUpActivity: AppCompatActivity() {
 
         firebaseAnalytics.logEvent("sign_up_screen_shown", null)
 
-        val inputtedEmail: String = signUpEmail.text.toString()
-        val inputtedPassword: String = signUpPassword.text.toString()
-        val samePassword: String = confirmPassword.text.toString()
+
 
         signUp.setOnClickListener {
+            val inputtedEmail: String = signUpEmail.text.toString()
+            val inputtedPassword: String = signUpPassword.text.toString()
+            val samePassword: String = confirmPassword.text.toString()
+
             if(inputtedPassword.equals(samePassword)){
                 firebaseAuth.createUserWithEmailAndPassword(inputtedEmail, inputtedPassword)
                             .addOnCompleteListener { task ->

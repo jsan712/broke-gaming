@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BrokeGaming</string>
+    <string name="sports">deportes</string>
+    <string name="strategy">estrategia</string>
+    <string name="sailing">navegación</string>
+    <string name="fantasy">fantasía</string>
+    <string name="racing">carreras</string>
+    <string name="tank">tanque</string>
+    <string name="sandbox">caja-de-arena</string>
+    <string name="survival">supervivencia</string>
+    <string name="zombie">zombi</string>
+    <string name="turn_based">por-turnos</string>
+    <string name="horror">terror</string>
+    <string name="military">militar</string>
+    <string name="action">acción</string>
+    <string name="action_rpg">acción-rpg</string>
+    <string name="sci_fi">ciencia- ficción</string>
+    <string name="card">carta</string>
+    <string name="superhero">superhéroe</string>
+    <string name="fighting">luchando</string>
+    <string name="martial_arts">artes-marciales</string>
+    <string name="low_spec">baja-especificación</string>
+    <string name="tower_defense">torre-de-defensa</string>
+    <string name="flight">vuelo</string>
+    <string name="battle_royale">batalla-real</string>
+    <string name="permadeath">muerte-permanente</string>
+    <string name="side_scroller">desplazamiento-lateral</string>
+    <string name="space">espacio</string>
+    <string name="open_world">mundo-abierto</string>
+    <string name="first_person">primera-persona</string>
+    <string name="third_person">tercera-persona</string>
+    <string name="top_down">De-arriba-hacia-abajo</string>
+    <string name="shooter">juego-de-disparos</string>
+    <string name="social">social</string>
+
+    <string-array name="sorting">
+        <item>fecha-de-lanzamiento</item>
+        <item>alfabético</item>
+        <item>relevancia</item>
+    </string-array>
+
+    <string name="login">Ingresar</string>
+    <string name="espa_ol">English</string>
+    <string name="don_t_have_an_account_sign_up_below">¿No tienes una cuenta? ¡Inscribirse abajo!</string>
+    <string name="sign_up">Inscribirse</string>
+    <string name="password">Contraseña</string>
+    <string name="username">Nombre de Usuario</string>
+    <string name="remember_me">Recordar Usuario</string>
+</resources>

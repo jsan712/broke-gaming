@@ -59,4 +59,40 @@ class GamesManager {
         }
         return games
     }
+
+    fun retrieveFilter(tag: String): List<Game>{
+        val games: MutableList<Game> = mutableListOf()
+
+        val request: Request = Request.Builder()
+            .url("https://www.freetogame.com/api/filter?tag=$tag")
+            .get()
+            .build()
+
+        val response: Response = okHttpClient.newCall(request).execute()
+        val responseBody: String? = response.body?.string()
+
+        if(response.isSuccessful && !responseBody.isNullOrBlank()){
+            //The following code was adapted from https://johncodeos.com/how-to-parse-json-in-android-using-kotlin/
+            val arr: JSONArray = JSONTokener(responseBody).nextValue() as JSONArray
+
+            for(i in 0 until arr.length()) {
+                val title: String = arr.getJSONObject(i).getString("title")
+                val description: String = arr.getJSONObject(i).getString("short_description")
+                val genre: String = arr.getJSONObject(i).getString("genre")
+                val pictureUrl: String = arr.getJSONObject(i).getString("thumbnail")
+                val url: String = arr.getJSONObject(i).getString("game_url")
+
+                val game: Game = Game(
+                    title = title,
+                    description = description,
+                    genre = genre,
+                    pictureURL = pictureUrl,
+                    url = url,
+                )
+
+                games.add(game)
+            }
+        }
+        return games
+    }
 }
