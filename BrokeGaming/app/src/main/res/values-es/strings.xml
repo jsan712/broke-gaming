@@ -30,7 +30,7 @@
     <string name="open_world">mundo-abierto</string>
     <string name="first_person">primera-persona</string>
     <string name="third_person">tercera-persona</string>
-    <string name="top_down">De-arriba-hacia-abajo</string>
+    <string name="top_down">de-arriba-hacia-abajo</string>
     <string name="shooter">juego-de-disparos</string>
     <string name="social">social</string>
 
@@ -47,4 +47,6 @@
     <string name="password">Contraseña</string>
     <string name="username">Nombre de Usuario</string>
     <string name="remember_me">Recordar Usuario</string>
+    <string name="search">filtro de búsqueda</string>
+    <string name="results_title">Resultados de la búsqueda</string>
 </resources>

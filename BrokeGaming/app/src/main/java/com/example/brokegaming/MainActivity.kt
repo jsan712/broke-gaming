@@ -13,8 +13,7 @@ import android.widget.*
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.*
 import android.widget.CompoundButton
-
-
+import org.jetbrains.anko.find
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseAnalytics: FirebaseAnalytics
     private lateinit var switch: Switch
+    private lateinit var languageButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         signUp = findViewById(R.id.signUp)
         progressBar = findViewById(R.id.progressBar)
         switch = findViewById(R.id.switch1)
+        languageButton = findViewById(R.id.languageButton)
         firebaseAuth = FirebaseAuth.getInstance()
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
@@ -98,11 +99,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
-
-
-
-
         signUp.setOnClickListener {
             val intent: Intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
@@ -135,6 +131,10 @@ class MainActivity : AppCompatActivity() {
 
         username.addTextChangedListener(textWatcher)
         password.addTextChangedListener(textWatcher)
+
+        languageButton.setOnClickListener {
+            //Change the language of the app
+        }
 
     }
 

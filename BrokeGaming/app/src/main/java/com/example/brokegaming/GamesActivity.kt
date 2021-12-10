@@ -16,17 +16,18 @@ import com.google.android.material.chip.Chip
 class GamesActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var spinner: Spinner
-    private lateinit var horizontalScrollView: HorizontalScrollView
-    private lateinit var chipGroup: ChipGroup
+    private lateinit var skipButton: Button
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_games)
-        horizontalScrollView = findViewById(R.id.horizontalScrollView)
-        chipGroup = findViewById(R.id.chipGroup)
+        skipButton = findViewById(R.id.skipButton)
+        progressBar = findViewById(R.id.progressBar4)
 
         Log.d("GamesActivity", "onCreate called!")
         val intent: Intent = getIntent()
+//        startActivity(intent)
 
         recyclerView = findViewById(R.id.recyclerView)
         //Sets the scrolling direction to vertical
@@ -41,48 +42,45 @@ class GamesActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         spinner.onItemSelectedListener = this
 
-        //The following code snippet was adapted from
-        //https://android--code.blogspot.com/2020/09/android-kotlin-chipgroup-get-selected.html
-        handleSelection()
-        // set checked change listener for each chip on chip group
-        chipGroup.children.forEach {
-            (it as Chip).setOnCheckedChangeListener { buttonView, isChecked ->
-                handleSelection()
-            }
+        skipButton.setOnClickListener {
+            Log.d("GamesActivity", "skip button clicked!")
+            val intent: Intent = Intent(this, ResultsActivity::class.java)
+            startActivity(intent)
         }
     }
 
     //Function to get chip group checked chips adapted from
     // https://android--code.blogspot.com/2020/09/android-kotlin-chipgroup-get-selected.html
-    private fun handleSelection() {
-        chipGroup.checkedChipIds.forEach {
-            val chip = findViewById<Chip>(it)
-            val gamesManager = GamesManager()
-            doAsync {
-                val games: List<Game> = try {
-                    val filter: String = chip.text.toString()
-                    gamesManager.retrieveFilter(filter)
-                }catch(exception: Exception){
-                    Log.e("GamesActivity", "Retrieving filter failed!", exception)
-                    listOf<Game>()
-                }
-
-                runOnUiThread {
-                    if(games.isNotEmpty()){
-                        val adapter: GamesAdapter = GamesAdapter(games)
-                        recyclerView.adapter = adapter
-                    }
-                    else{
-                        Toast.makeText(
-                            this@GamesActivity,
-                            "Failed to retrieve results!",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                }
-            }
-        }
-    }
+//    private fun handleSelection() {
+//        chipGroup.checkedChipIds.forEach {
+//            val chip = findViewById<Chip>(it)
+//            val gamesManager = GamesManager()
+//            doAsync {
+//                val games: List<Game> = try {
+//                    val filter: String = chip.text.toString()
+//                    filters.add(filter)
+//                    gamesManager.retrieveFilter(filter)
+//                }catch(exception: Exception){
+//                    Log.e("GamesActivity", "Retrieving filter failed!", exception)
+//                    listOf<Game>()
+//                }
+//
+//                runOnUiThread {
+//                    if(games.isNotEmpty()){
+//                        val adapter: GamesAdapter = GamesAdapter(games)
+//                        recyclerView.adapter = adapter
+//                    }
+//                    else{
+//                        Toast.makeText(
+//                            this@GamesActivity,
+//                            "Failed to retrieve results!",
+//                            Toast.LENGTH_LONG
+//                        ).show()
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     private fun getGames(sortBy: String){
         val gamesManager = GamesManager()
