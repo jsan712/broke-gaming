@@ -9,12 +9,13 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.Toast
+import android.widget.*
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.*
+import android.widget.CompoundButton
+
+
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var username: EditText
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var signUp: Button
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseAnalytics: FirebaseAnalytics
+    private lateinit var switch: Switch
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         login = findViewById(R.id.login)
         signUp = findViewById(R.id.signUp)
         progressBar = findViewById(R.id.progressBar)
+        switch = findViewById(R.id.switch1)
         firebaseAuth = FirebaseAuth.getInstance()
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
@@ -45,8 +48,24 @@ class MainActivity : AppCompatActivity() {
 
         login.isEnabled = false
 
-        val savedUsername = preferences.getString("USERNAME", "")
-        username.setText(savedUsername)
+        val restoreUsername = preferences.getString("RESTOREUSERNAME", "true")
+        switch.isChecked = restoreUsername == "true"
+        if(switch.isChecked){
+            val savedUsername = preferences.getString("USERNAME", "")
+            username.setText(savedUsername)
+        }
+
+        //The following code snippet is adapted from
+        // https://newbedev.com/java-switchcompat-setoncheckedchangelistener-kotlin-code-example
+        switch.setOnCheckedChangeListener { buttonView, isChecked ->
+            // do something, the isChecked will be true if the switch is in the On position
+            if(buttonView.isChecked){
+                preferences.edit().putString("RESTOREUSERNAME", "true").apply()
+            }
+            else{
+                preferences.edit().putString("RESTOREUSERNAME", "false").apply()
+            }
+        }
 
         login.setOnClickListener{
             //Save the username to SharedPreferences
@@ -78,6 +97,11 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
+
+
+
+
 
         signUp.setOnClickListener {
             val intent: Intent = Intent(this, SignUpActivity::class.java)
