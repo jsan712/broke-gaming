@@ -1,0 +1,6 @@
+To enjoy the full expierience of the app create an account with your email and a password and then simply start scrolling!
+
+The only limitation to this app is when certain browsers are paired together with the browser drop down in the Results activity it may through a toast saying 
+"Could not retrieve results!" which simply means that there are no games for that combination of filters. Otherwise there are no known issues.
+
+Do not go above 4 API calls per second.
