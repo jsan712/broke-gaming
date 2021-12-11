@@ -57,6 +57,9 @@
     <string name="search">Filter Search</string>
     <string name="results_title">Search Results</string>
     <string name="games_title">All games</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="email_address">Email address</string>
+    <string name="text_prompt">To sign up, enter a valid email address and a password that contains at least 8 characters</string>
 
     <string-array name="sorting">
         <item>release-date</item>

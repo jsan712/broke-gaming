@@ -56,4 +56,7 @@
     <string name="search">filtro de búsqueda</string>
     <string name="results_title">Resultados de la búsqueda</string>
     <string name="games_title">Todos los juegos</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="email_address">Dirección de correo electrónico</string>
+    <string name="text_prompt">Para registrarse, ingrese una dirección de correo electrónico válida y una contraseña que contenga al menos 8 caracteres</string>
 </resources>
