@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">BrokeGaming</string>
     <string name="sports">deportes</string>
     <string name="strategy">estrategia</string>
@@ -30,7 +30,7 @@
     <string name="open_world">mundo-abierto</string>
     <string name="first_person">primera-persona</string>
     <string name="third_person">tercera-persona</string>
-    <string name="top_down">De-arriba-hacia-abajo</string>
+    <string name="top_down">de-arriba-hacia-abajo</string>
     <string name="shooter">juego-de-disparos</string>
     <string name="social">social</string>
 
@@ -38,6 +38,12 @@
         <item>fecha-de-lanzamiento</item>
         <item>alfabético</item>
         <item>relevancia</item>
+        <item>popularidad</item>
+    </string-array>
+
+    <string-array name="platforms">
+        <item>pc</item>
+        <item>navegador web</item>
     </string-array>
 
     <string name="login">Ingresar</string>
@@ -47,4 +53,10 @@
     <string name="password">Contraseña</string>
     <string name="username">Nombre de Usuario</string>
     <string name="remember_me">Recordar Usuario</string>
+    <string name="search">filtro de búsqueda</string>
+    <string name="results_title">Resultados de la búsqueda</string>
+    <string name="games_title">Todos los juegos</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="email_address">Dirección de correo electrónico</string>
+    <string name="text_prompt">Para registrarse, ingrese una dirección de correo electrónico válida y una contraseña que contenga al menos 8 caracteres</string>
 </resources>
