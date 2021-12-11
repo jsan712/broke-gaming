@@ -46,6 +46,7 @@
     <string name="tower_defense">tower-defense</string>
     <string name="horror">horror</string>
     <string name="mmorts" translatable="false">mmorts</string>
+
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
     <string name="don_t_have_an_account_sign_up_below">Don\'t have an account? Sign up below!</string>
@@ -55,10 +56,17 @@
     <string name="remember_me">Remember me</string>
     <string name="search">Filter Search</string>
     <string name="results_title">Search Results</string>
+    <string name="games_title">All games</string>
 
     <string-array name="sorting">
         <item>release-date</item>
         <item>alphabetical</item>
         <item>relevance</item>
+        <item>popularity</item>
+    </string-array>
+
+    <string-array name="platforms">
+        <item>pc</item>
+        <item>browser</item>
     </string-array>
 </resources>

@@ -61,11 +61,11 @@ class GamesManager {
         return games
     }
 
-    fun retrieveFilter(tag: String): List<Game>{
+    fun retrieveFilter(tag: String, platform: String): List<Game>{
         val games: MutableList<Game> = mutableListOf()
 
         val request: Request = Request.Builder()
-            .url("https://www.freetogame.com/api/filter?tag=$tag")
+            .url("https://www.freetogame.com/api/filter?tag=$tag&platform=$platform")
             .get()
             .build()
 

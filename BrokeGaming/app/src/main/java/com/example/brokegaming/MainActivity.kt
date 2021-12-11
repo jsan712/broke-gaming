@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseAnalytics: FirebaseAnalytics
     private lateinit var switch: Switch
-    private lateinit var languageButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         signUp = findViewById(R.id.signUp)
         progressBar = findViewById(R.id.progressBar)
         switch = findViewById(R.id.switch1)
-        languageButton = findViewById(R.id.languageButton)
         firebaseAuth = FirebaseAuth.getInstance()
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
@@ -102,40 +100,10 @@ class MainActivity : AppCompatActivity() {
         signUp.setOnClickListener {
             val intent: Intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
-
-//            val inputtedUsername: String = username.text.toString()
-//            val inputtedPassword: String = password.text.toString()
-//            firebaseAuth.createUserWithEmailAndPassword(inputtedUsername, inputtedPassword)
-//                .addOnCompleteListener { task ->
-//                    if(task.isSuccessful){
-//                        val currentUser: FirebaseUser = firebaseAuth.currentUser!!
-//                        Toast.makeText(this, "Registered successfully: ${currentUser.email}", Toast.LENGTH_LONG).show()
-//                    }
-//                    else{
-//                        val exception = task.exception
-//                        if(exception is FirebaseAuthInvalidCredentialsException){
-//                            Toast.makeText(this, "Registration failed: you did not supply a valid email address or password", Toast.LENGTH_LONG).show()
-//                        }
-//                        else if(exception is FirebaseAuthUserCollisionException){
-//                            Toast.makeText(this, "Registration failed: this account already exists!", Toast.LENGTH_LONG).show()
-//                        }
-//                        else if(exception is FirebaseAuthWeakPasswordException){
-//                            Toast.makeText(this, "Registration failed: your password does not meet minimum requirements!", Toast.LENGTH_LONG).show()
-//                        }
-//                        else{
-//                            Toast.makeText(this, "Registration failed: $exception", Toast.LENGTH_LONG).show()
-//                        }
-//                    }
-//                }
         }
 
         username.addTextChangedListener(textWatcher)
         password.addTextChangedListener(textWatcher)
-
-        languageButton.setOnClickListener {
-            //Change the language of the app
-        }
-
     }
 
     private val textWatcher: TextWatcher = object : TextWatcher {
